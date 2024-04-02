@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RandomGenerator;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,6 +23,7 @@ namespace NumberGenerator
 
             grpBxSelection.Visible = false;
 
+            #region Checked Box Stuff
             var items = checkedListBox1.Items.Count;
             for (int i = 0; i < items; i++)
             {
@@ -30,11 +32,12 @@ namespace NumberGenerator
 
             checkedListBox1.SetItemChecked(2, false);
             checkedListBox1.SetItemChecked(3, false);
-
+            #endregion
 
             rdBtnGuid.Checked = true;
-            txtQty.Text = "2";
-            txtCharLength.Text = "10";
+            txtQty.Text = RandomGenerator.Properties.Settings.Default.Quantity;
+            txtCharLength.Text = RandomGenerator.Properties.Settings.Default.CharacterQuantity;
+
 
             var lengthNullChecked = string.IsNullOrEmpty(txtQty.Text) ? "0" : txtQty.Text;
             int length = int.Parse(lengthNullChecked);
@@ -290,6 +293,30 @@ namespace NumberGenerator
                 richTextBox1.Text = value;
             }
 
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Email: ddpro123@outlook.com \n \n Version: 1.1", "Made By Danny!", MessageBoxButtons.OK);
+        }
+
+        private void preferencesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var pref = new Preferenes();
+            pref.ShowDialog();
+        }
+        public void Reload()
+        {
+            txtQty.Text = RandomGenerator.Properties.Settings.Default.Quantity;
+            txtCharLength.Text = RandomGenerator.Properties.Settings.Default.CharacterQuantity;
+
+            Refresh();
+            Invalidate();
         }
     }
 }

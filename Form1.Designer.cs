@@ -41,16 +41,24 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.grpBxChars = new System.Windows.Forms.GroupBox();
             this.txtCharLength = new System.Windows.Forms.TextBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.preferencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.grpBxSelection.SuspendLayout();
             this.grpBxChars.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // richTextBox1
             // 
             this.richTextBox1.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(12, 245);
+            this.richTextBox1.Location = new System.Drawing.Point(18, 277);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
             this.richTextBox1.Size = new System.Drawing.Size(572, 281);
@@ -62,7 +70,7 @@
             this.groupBox1.Controls.Add(this.rdBtnString);
             this.groupBox1.Controls.Add(this.rdBtnNumber);
             this.groupBox1.Controls.Add(this.rdBtnGuid);
-            this.groupBox1.Location = new System.Drawing.Point(29, 12);
+            this.groupBox1.Location = new System.Drawing.Point(35, 44);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(164, 127);
             this.groupBox1.TabIndex = 1;
@@ -118,7 +126,7 @@
             "Numbers"});
             this.checkedListBox1.Location = new System.Drawing.Point(11, 26);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(189, 134);
+            this.checkedListBox1.Size = new System.Drawing.Size(189, 117);
             this.checkedListBox1.TabIndex = 2;
             this.checkedListBox1.Visible = false;
             this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
@@ -135,7 +143,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtQty);
-            this.groupBox2.Location = new System.Drawing.Point(29, 145);
+            this.groupBox2.Location = new System.Drawing.Point(35, 177);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(104, 66);
             this.groupBox2.TabIndex = 4;
@@ -145,7 +153,7 @@
             // grpBxSelection
             // 
             this.grpBxSelection.Controls.Add(this.checkedListBox1);
-            this.grpBxSelection.Location = new System.Drawing.Point(199, 12);
+            this.grpBxSelection.Location = new System.Drawing.Point(205, 44);
             this.grpBxSelection.Name = "grpBxSelection";
             this.grpBxSelection.Size = new System.Drawing.Size(215, 167);
             this.grpBxSelection.TabIndex = 5;
@@ -154,7 +162,7 @@
             // 
             // btnGenerate
             // 
-            this.btnGenerate.Location = new System.Drawing.Point(152, 199);
+            this.btnGenerate.Location = new System.Drawing.Point(158, 231);
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.Size = new System.Drawing.Size(94, 31);
             this.btnGenerate.TabIndex = 6;
@@ -164,7 +172,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(305, 199);
+            this.btnClose.Location = new System.Drawing.Point(311, 231);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(94, 31);
             this.btnClose.TabIndex = 7;
@@ -175,7 +183,7 @@
             // grpBxChars
             // 
             this.grpBxChars.Controls.Add(this.txtCharLength);
-            this.grpBxChars.Location = new System.Drawing.Point(420, 12);
+            this.grpBxChars.Location = new System.Drawing.Point(426, 44);
             this.grpBxChars.Name = "grpBxChars";
             this.grpBxChars.Size = new System.Drawing.Size(143, 79);
             this.grpBxChars.TabIndex = 5;
@@ -190,11 +198,69 @@
             this.txtCharLength.TabIndex = 3;
             this.txtCharLength.TextChanged += new System.EventHandler(this.txtCharLength_TextChanged);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.editToolStripMenuItem,
+            this.helpToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(619, 28);
+            this.menuStrip1.TabIndex = 8;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(116, 26);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.preferencesToolStripMenuItem});
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
+            this.editToolStripMenuItem.Text = "Edit";
+            // 
+            // preferencesToolStripMenuItem
+            // 
+            this.preferencesToolStripMenuItem.Name = "preferencesToolStripMenuItem";
+            this.preferencesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.preferencesToolStripMenuItem.Text = "Preferences";
+            this.preferencesToolStripMenuItem.Click += new System.EventHandler(this.preferencesToolStripMenuItem_Click);
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(619, 538);
+            this.ClientSize = new System.Drawing.Size(619, 575);
             this.Controls.Add(this.grpBxChars);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnGenerate);
@@ -202,8 +268,11 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Random Generator";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -211,7 +280,10 @@
             this.grpBxSelection.ResumeLayout(false);
             this.grpBxChars.ResumeLayout(false);
             this.grpBxChars.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -223,13 +295,20 @@
         private System.Windows.Forms.RadioButton rdBtnNumber;
         private System.Windows.Forms.RadioButton rdBtnGuid;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.TextBox txtQty;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox grpBxSelection;
         private System.Windows.Forms.Button btnGenerate;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.GroupBox grpBxChars;
-        private System.Windows.Forms.TextBox txtCharLength;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem preferencesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        public System.Windows.Forms.TextBox txtQty;
+        public System.Windows.Forms.TextBox txtCharLength;
     }
 }
 

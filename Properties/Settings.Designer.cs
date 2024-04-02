@@ -22,5 +22,29 @@ namespace RandomGenerator.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2")]
+        public string Quantity {
+            get {
+                return ((string)(this["Quantity"]));
+            }
+            set {
+                this["Quantity"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
+        public string CharacterQuantity {
+            get {
+                return ((string)(this["CharacterQuantity"]));
+            }
+            set {
+                this["CharacterQuantity"] = value;
+            }
+        }
     }
 }
